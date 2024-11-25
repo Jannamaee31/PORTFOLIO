@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #8e6e6f;
+}
+
+.portfolio-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.portfolio-header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #5e4a4a;
+}
+
+.portfolio-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.portfolio-header p {
+    font-size: 14px;
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.profile-section {
+    flex: 1;
+    max-width: 30%; /* Set width of profile section */
+    background-color: #b78b8b;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 70px;
+    height: 80px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.profile-info{
+   
+    text-align: center;
+    line-height: 3.5; /* Adjust the vertical space between the letters */
+}
+
+
+
+.right-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column; /* Stack box1 and box2 vertically */
+    gap: 20px; /* Space between boxes */
+}
+
+.box1 {
+    flex: 1;
+    height: auto; /* Allow the height to adapt to the content */
+    background-color: #b78b8b;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Stack the header and paragraph vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    padding: 20px; /* Add padding for spacing */
+    gap: 10px; /* Add some space between header and paragraph */
+}
+
+.box1 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-top: 5%;
+}
+
+.box1 p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.box2 {
+    flex: 1;
+    height: 150px;
+    background-color: #b78b8b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Light Theme */
+.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.light-theme .portfolio-header {
+    background-color: #ddd;
+}
+
+.light-theme .profile-section, .light-theme .box1, .light-theme .box2 {
+    background-color: #e0e0e0;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.theme-toggle:hover {
+    background-color: #555;
+}
+
+/* Welcome Message */
+.welcome-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5e4a4a;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    animation: fadeInOut 3s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
